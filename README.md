@@ -1,3 +1,5 @@
 # INC224-Part2: Embedded C Programming
 
-All examples can be found in the `examples` directory.
+Examples can be found in the `examples` directory.
+
+Documents can be found in the `documents` directory.
