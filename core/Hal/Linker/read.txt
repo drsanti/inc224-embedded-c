@@ -1,0 +1,1 @@
+https://microchip.my.site.com/s/article/PIC24-dsPIC33-bootloaders---How-to-Create-and-Verify-a-Custom-Linker-File

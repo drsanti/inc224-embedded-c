@@ -1,0 +1,87 @@
+{
+	"SysBuild": {
+		"Version": "1.0.0",
+		"RootDir__Mac": "./",
+		"GccBin__Mac": "/Applications/microchip/xc16/v2.00/bin",
+		"DfpDir__Mac": "/Applications/microchip/mplabx/v6.05/packs/Microchip/PIC24F-GA-GB_DFP/1.8.217/xc16",
+		"RootDir__Win": "./",
+		"GccBin__Win": "C:/Program Files/Microchip/xc16/v2.00/bin",
+		"DfpDir__Win": "C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC24F-GA-GB_DFP/1.5.181/xc16",
+		"McuPart": "24FJ48GA002",
+		"OptLevel": "s",
+		"UseDebug": "no",
+		"GenDep": "no"
+	},
+	"LibBuild": {
+		"HalSrcFiles": [
+			"Core/Hal/Src/adc.c",
+			"Core/Hal/Src/gpio.c",
+			"Core/Hal/Src/hal.c",
+			"Core/Hal/Src/mcu.c",
+			"Core/Hal/Src/pmap.c",
+			"Core/Hal/Src/pwm.c",
+			"Core/Hal/Src/systick.c",
+			"Core/Hal/Src/uart.c"
+		],
+		"TrnSrcFiles": [
+			"Core/Trn/Src/analog.c",
+			"Core/Trn/Src/pdsgen.c",
+			"Core/Trn/Src/queue.c",
+			"Core/Trn/Src/serial.c",
+			"Core/Trn/Src/switch.c",
+			"Core/Trn/Src/ternion.c",
+			"Core/Trn/Src/timer.c"
+		],
+		"IncludeDirs": [
+			"Core/Hal/Inc",
+			"Core/Trn/Inc"
+		],
+		"OutputDir": "Core/Trn/build",
+		"LibName": "ternion-library.a"
+	},
+	"HexBuild": {
+		"Note-1": [
+			"All directories and files are located in the RootDir"
+		],
+		"MainDir": "App/Main",
+		"OutputDir": "App/Main/build",
+		"LinkerScript": "Core/Hal/Linker/ternion-lnk.gld",
+		"HexName": "ternion-app.hex",
+		"Note-HeapSize": [
+			"HeapSize must be 2048 or 4096",
+			"1024 is not enough for ternion",
+			"2024*3 cannot be compiled (in xc16 v2)",
+			"4096 is ok, but too much"
+		],
+		"HeapSize": 4096,
+		"SourceFiles": [
+			"App/Main/main.c"
+		],
+		"IncludeDirs": [
+			"Core/Hal/Inc",
+			"Core/Trn/Inc"
+		],
+		"LibraryFiles": [],
+		"RepMem": "yes",
+		"GenMap": "no",
+		"GenMem": "no"
+	},
+	"Note-FlashCommand": [
+		"CommPort: Name of desired serial communication port, e.g., COM1 or /dev/tty.usbserial-140.",
+		"BaudRate: Baud rate of the serial communication. The default value is 57600.",
+		"HexPath: Full path of hex file to be programmed to program memory of microcontroller."
+	],
+	"FlashCommand": {
+		"CommPort": "default",
+		"BaudRate": "default",
+		"HexPath": "default"
+	},
+	"Note-MonitorCommand": [
+		"CommPort: Name of desired serial communication port, e.g., COM1 or /dev/tty.usbserial-140.",
+		"BaudRate: Baud rate of the serial communication. The default value is 115200."
+	],
+	"MonitorCommand": {
+		"CommPort": "default",
+		"BaudRate": "default"
+	}
+}
